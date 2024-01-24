@@ -34,7 +34,7 @@ const options = NextAuth({
             throw new Error("Credenciais erradas!");
           }
         } catch (err) {
-          throw new Error(err as string).message;
+          throw new Error(err as string);
         }
       },
     }),
