@@ -31,7 +31,7 @@ export default function Register() {
 
                         <Button
                             type='submit'
-                            text={isFormSubmitting ? "Carregando" : "Inscreva-se"}
+                            text={isFormSubmitting ? "Carregando..." : "Inscreva-se"}
                             className='bg-teal-400 tex-white rounded p-2 cursor-pointer'
                             disabled={isFormSubmitting}
                         />
