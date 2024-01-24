@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "../styles/globals.css";
+import { AuthProvider } from "@/components/AuthProvider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <AuthProvider>
+        <body className={roboto.className}>{children}</body>
+      </AuthProvider>
     </html>
   );
 }
