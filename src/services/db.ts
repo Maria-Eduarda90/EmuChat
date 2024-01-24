@@ -8,6 +8,6 @@ export async function connect() {
       await mongoose.connect(process.env.MONGOOSE);
     }
   } catch (err) {
-    throw new Error(err as string).message;
+    throw new Error(err as string);
   }
 }
