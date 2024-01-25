@@ -7,7 +7,10 @@ import { initialValuesRegister } from '@/initialValuesFormik/initialValues.regis
 import { validationSchemaRegister } from '@/validation/register';
 
 import { Form, Formik } from 'formik';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Register() {
     const {
@@ -15,6 +18,20 @@ export default function Register() {
         isFormSubmitting,
         handleSubmit
     } = useRegister();
+
+    const router = useRouter();
+
+    const { status } = useSession();
+
+    useEffect(() => {
+        if (status === "authenticated") {
+            router.push("/");
+        }
+    }, [status, router]);
+
+    if (status !== "unauthenticated") {
+        return null;
+    }
 
     return (
         <main className='min-h-screen flex items-center justify-center'>

@@ -6,11 +6,32 @@ import { useLogin } from '@/hooks/useLogin';
 import { initialValuesLogin } from '@/initialValuesFormik/initialValues.login';
 import { validationSchemaLogin } from '@/validation/login';
 import { Form, Formik } from 'formik';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Login() {
 
-    const { handleSubmitLogin, error, isFormSubmitting } = useLogin();
+    const {
+        handleSubmitLogin,
+        error,
+        isFormSubmitting
+    } = useLogin();
+
+    const router = useRouter();
+
+    const { status } = useSession();
+
+    useEffect(() => {
+        if (status === "authenticated") {
+            router.push("/");
+        }
+    }, [status, router]);
+
+    if (status !== "unauthenticated") {
+        return null;
+    }
 
     return (
         <main className='min-h-screen flex items-center justify-center'>
