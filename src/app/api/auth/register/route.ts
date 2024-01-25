@@ -23,8 +23,6 @@ export async function POST(request: Request) {
       });
     }
 
-    console.log("api: ", emailExists);
-
     const hashedPassword = await bcrypt.hash(password, 5);
 
     const user = new User({
