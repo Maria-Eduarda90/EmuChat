@@ -9,7 +9,7 @@ export function HeaderSession() {
             <div>Olá {`${session?.user?.name?.split(" ")[0]}`}</div>
             <Button
                 text="sair"
-                className="bg-red-600 text-white rounded px-4 cursor-pointer"
+                className="bg-gradient-to-r from-red-600 to-red-900 text-white rounded px-4 cursor-pointer"
                 onClick={() => signOut()}
             />
         </div>
