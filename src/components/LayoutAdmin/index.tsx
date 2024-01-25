@@ -20,5 +20,5 @@ export function LayoutAdmin({ children }: ChildrenType) {
         return null
     }
 
-    return <div className="min-h-screen">{children}</div>
+    return <div className="">{children}</div>
 }
