@@ -44,7 +44,7 @@ export default function Login() {
                         <Button
                             type='submit'
                             text={isFormSubmitting ? "Carregando..." : "Entrar"}
-                            className='bg-teal-400 tex-white rounded p-2 cursor-pointer'
+                            className='bg-gradient-to-r from-green-400 to-blue-500 tex-white rounded p-2 cursor-pointer'
                             disabled={isFormSubmitting}
                         />
                         {error && (
