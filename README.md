@@ -36,5 +36,7 @@ mongoDB
 </h1>
 
 <h1 align="center">
-  <img alt="" src="./img/05.02.2024_12.45.23_REC.gif" />
+  <img alt="" src="./img/projeto.png" />
 </h1>
+
+link ->
