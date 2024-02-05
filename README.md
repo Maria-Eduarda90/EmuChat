@@ -39,4 +39,4 @@ mongoDB
   <img alt="" src="./img/projeto.png" />
 </h1>
 
-link ->
+link -> https://github.com/Maria-Eduarda90/next-auth-mongodb/blob/main/img/05.02.2024_12.45.23_REC.gif
